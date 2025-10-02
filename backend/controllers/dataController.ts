@@ -1,12 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
-// Importar el modelo y la interfaz correctamente
 import { DataEntry, IDataEntry } from '../models/dataModel'; 
 import { CustomError } from '../middlewares/errorHandler';
 
-// Función para CREAR un nuevo registro de datos (POST)
 export const createDataEntry = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    // Mongoose automáticamente valida el esquema antes de guardar
     const newData = new DataEntry(req.body);
     await newData.save();
 
@@ -16,7 +13,6 @@ export const createDataEntry = async (req: Request, res: Response, next: NextFun
         message: 'Registro de datos creado exitosamente.'
     });
   } catch (error) {
-    // Pasa el error al middleware centralizado para su manejo (validación, duplicidad, etc.)
     next(error);
   }
 };
