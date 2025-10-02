@@ -18,31 +18,26 @@ Sirve como una aplicación de gestión y visualización de datos simulados de Ci
 
 ##  Estructura del Proyecto
 
-/data-science-app
-│
-├── /backend
-│ ├── server.ts # Servidor principal Express
-│ ├── /routes
-│ │ └── apiRoutes.ts # Definición de Rutas CRUD y Login
-│ ├── /controllers
-│ │ └── dataController.ts # Lógica de negocio (Funciones CRUD)
-│ ├── /models
-│ │ └── dataModel.ts # Definición del esquema Mongoose
-│ ├── /middlewares
-│ │ └── errorHandler.ts # Manejo centralizado de errores y CustomError
-│ └── /utils
-│ └── dbConnect.ts # Función de conexión a MongoDB
-│
-├── /frontend
-│ ├── /src
-│ │ └── App.tsx # Componente único (contiene lógica, rutas y componentes UI)
-│
-├── package.json # Dependencias y scripts de inicio
-├── tsconfig.json # Configuración de TypeScript
-└── .env # Variables de entorno (¡CLAVE!)
+- **/data-science-app**
+  - **/backend**
+    - `server.ts` → Servidor principal Express
+    - **/routes**
+      - `apiRoutes.ts` → Definición de rutas CRUD y login
+    - **/controllers**
+      - `dataController.ts` → Lógica de negocio (Funciones CRUD)
+    - **/models**
+      - `dataModel.ts` → Definición del esquema Mongoose
+    - **/middlewares**
+      - `errorHandler.ts` → Manejo centralizado de errores y CustomError
+    - **/utils**
+      - `dbConnect.ts` → Función de conexión a MongoDB
+  - **/frontend**
+    - **/src**
+      - `App.tsx` → Componente único con rutas y UI
+  - `package.json` → Dependencias y scripts de inicio
+  - `tsconfig.json` → Configuración de TypeScript
+  - `.env` → Variables de entorno (¡clave!)
 
-less
-Copiar código
 
 ##  Configuración y Conexión a MongoDB Atlas
 
