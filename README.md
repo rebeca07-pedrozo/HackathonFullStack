@@ -60,6 +60,8 @@ PORT=5000
 
 ```bash
 npm install --legacy-peer-deps
+npm run start:backend
+npm run start:frontend
 ```
 
 ### 3. Iniciar el Proyecto Fullstack
@@ -79,4 +81,5 @@ Una vez que ambos servicios estén corriendo, usa estas credenciales para accede
  | :--- | :--- | 
 | **Usuario** | `admin` | 
 | **Contraseña** | `password123` | 
+
 
