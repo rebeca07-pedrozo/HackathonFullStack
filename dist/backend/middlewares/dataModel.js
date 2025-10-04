@@ -1,5 +1,4 @@
 "use strict";
-// backend/models/dataModel.ts
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -26,7 +25,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DataEntry = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
-// 2. Define el esquema de Mongoose
 const DataEntrySchema = new mongoose_1.Schema({
     title: {
         type: String,
@@ -50,8 +48,7 @@ const DataEntrySchema = new mongoose_1.Schema({
         default: ''
     }
 }, {
-    timestamps: true // Añade automáticamente createdAt y updatedAt
+    timestamps: true 
 });
-// 3. Exporta el Modelo Mongoose
-// Nota: 'DataEntry' será el nombre de la colección en MongoDB (se pluralizará automáticamente a 'dataentries')
+
 exports.DataEntry = mongoose_1.default.model('DataEntry', DataEntrySchema);
