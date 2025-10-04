@@ -6,7 +6,7 @@ Este proyecto representa una aplicación Fullstack robusta para la gestión y an
 
 ![Pantalla de Inicio1](./pics/vista1.png)
 ![Pantalla de Inicio2](./pics/vista2.png)
-![Login](./pics/IniciarSesion.png)
+![Login](./pics/iniciarSesion.png)
 ![Dashboard](./pics/vista3.png)
 
 
@@ -79,3 +79,4 @@ Una vez que ambos servicios estén corriendo, usa estas credenciales para accede
  | :--- | :--- | 
 | **Usuario** | `admin` | 
 | **Contraseña** | `password123` | 
+
