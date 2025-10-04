@@ -1,13 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteDataEntry = exports.updateDataEntry = exports.getAllDataEntries = exports.createDataEntry = void 0;
-// Importar el modelo y la interfaz correctamente
 const dataModel_1 = require("../models/dataModel");
 const errorHandler_1 = require("../middlewares/errorHandler");
-// Función para CREAR un nuevo registro de datos (POST)
 const createDataEntry = async (req, res, next) => {
     try {
-        // Mongoose automáticamente valida el esquema antes de guardar
         const newData = new dataModel_1.DataEntry(req.body);
         await newData.save();
         res.status(201).json({
@@ -17,7 +14,6 @@ const createDataEntry = async (req, res, next) => {
         });
     }
     catch (error) {
-        // Pasa el error al middleware centralizado para su manejo (validación, duplicidad, etc.)
         next(error);
     }
 };
@@ -42,7 +38,7 @@ exports.getAllDataEntries = getAllDataEntries;
 const updateDataEntry = async (req, res, next) => {
     try {
         const entry = await dataModel_1.DataEntry.findByIdAndUpdate(req.params.id, req.body, {
-            new: true,
+            new: true, // Devuelve el documento modificado
             runValidators: true, // Ejecuta los validadores definidos en el Schema
         });
         if (!entry) {

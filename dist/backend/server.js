@@ -19,7 +19,7 @@ const app = (0, express_1.default)();
 // Configuración de middlewares
 // Habilita CORS para permitir peticiones desde el frontend (React)
 app.use((0, cors_1.default)({
-    origin: 'http://localhost:3000',
+    origin: 'http://localhost:3000', // Reemplaza con la URL de tu frontend en producción
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
